@@ -1,0 +1,37 @@
+{
+  "name": "fablo-test-network-org2",
+  "description": "Connection profile for Org2 in Fablo network",
+  "version": "1.0.0",
+  "client": {
+    "organization": "Org2"
+  },
+  "organizations": {
+    "Org2": {
+      "mspid": "Org2MSP",
+      "peers": [
+        "peer0.org1.example.com",
+        "peer0.org2.example.com"
+      ],
+      "certificateAuthorities": [
+        "ca.org2.example.com"
+      ]
+    }
+  },
+  "peers": {
+    "peer0.org1.example.com": {
+      "url": "grpc://localhost:7041"
+    },
+    "peer0.org2.example.com": {
+      "url": "grpc://localhost:7061"
+    }
+  },
+  "certificateAuthorities": {
+    "ca.org2.example.com": {
+      "url": "http://localhost:7060",
+      "caName": "ca.org2.example.com",
+      "httpOptions": {
+        "verify": false
+      }
+    }
+  }
+}
